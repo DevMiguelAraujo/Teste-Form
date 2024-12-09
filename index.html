@@ -75,6 +75,7 @@
                   name="name"
                   id="name"
                   placeholder="Marcos da Costa"
+                  required
                 />
               </div>
               <div class="input-form">
@@ -87,6 +88,7 @@
                   name="registration"
                   id="registration"
                   placeholder="250700240"
+                  required
                 />
               </div>
               <div class="input-form">
@@ -99,7 +101,224 @@
                   name="birthday"
                   id="birthday"
                   placeholder="dd/mm/aaaa"
+                  required
                 />
+              </div>
+              <div class="input-form">
+                <label for="city">
+                  Cidade
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="Jundiaí"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="state">
+                  Estado
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="state"
+                  id="state"
+                  placeholder="São Paulo"
+                  required
+                />
+              </div>
+            
+              <div class="input-form">
+                <label for="country">
+                  País
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="country"
+                  id="country"
+                  placeholder="Brasil"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="rg">
+                  Número do RG
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="rg"
+                  id="rg"
+                  placeholder="99.999.999-99"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="cpf">
+                  Número do CPF
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="cpf"
+                  id="cpf"
+                  placeholder="000.000.000.00"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="email">
+                  Digite seu email
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="alunoeinstein@email.com.br"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="telHome">
+                  Telefone Residencial
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="telHome"
+                  id="telHome"
+                  placeholder="9999-9999"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="telPrivate">
+                  Telefone Celular
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="telPrivate"
+                  id="telPrivate"
+                  placeholder="9999-9999"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="dateConclusion">
+                  Ano de Conclusão do Ensino Médio
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="date"
+                  name="dateConclusion"
+                  id="dateConclusion"
+                  placeholder="dd/mm/aaaa"
+                  required
+                />
+              </div>  
+              <div>
+                <label for="teaching">
+                  Cursou Ensino Fundamental em:
+                  <span class="required">*</span>
+                </label>
+                <select name="teaching" id="teaching required">
+                  <option value="public">Público</option>
+                  <option value="private">Particular</option>
+                  <option value="privateWDiscount">Particular com Bolsa</option>
+                </select>
+              </div>
+              <div class="input-form">
+                <label for="price">
+                  Valor da Mensalidade Atual
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="price"
+                  id="price"
+                  placeholder="R$ 1.000"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="accordion-button">
+              <h3>Grupo Familiar</h3>
+              <span class="arrow"></span>
+            </div>
+            <div class="accordion-form">
+              <div class="input-form">
+                <label for="valueFamily">
+                  Valor do Patrimônio Familiar
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="valueFamily"
+                  id="valueFamily"
+                  placeholder="R$50.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="sizeFamily">
+                  Quantidade de Pessoas no Grupo Familiar
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="sizeFamily"
+                  id="sizeFamily"
+                  placeholder="8"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="householdIncome">
+                  Renda Familiar Mensal Bruta
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="householdIncome"
+                  id="householdIncome"
+                  placeholder="R$50.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="householdIncomePC">
+                  Renda Familiar Mensal Bruta Per Capita
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="householdIncomePC"
+                  id="householdIncomePC"
+                  placeholder="R$50.000"
+                  required
+                />
+              </div>
+              <div class="textExplication">
+                <p>
+                  *A renda per capita é calculada somando-se à renda bruta dos componentes 
+                  do grupo familiar e dividindo-se pelo número de pessoas que formem este grupo familiar.
+                  Entende-se por renda  familiar mensal bruta o somatório do valor bruto dos salários, 
+                  proventos, pensões, pensões alimentícias, aposentadorias, outros rendimentos do trabalho 
+                  não assalariado, rendimentos do mercado informal ou autônomo e rendimentos auferidos do 
+                  patrimônio, de todos os membros do grupo familiar, incluindo o candidato.
+                  Entende-se pelo grupo familiar, além do próprio candidato, o conjunto de pessoas, 
+                  que usufruam da renda bruta mensal familiar e que sejam relacionados ao candidato 
+                  pelos seguintes graus de parentesco: pai, padrasto, mãe, madrasta, cônjuge, 
+                  companheiro, filho, enteado, avós, etc.
+                </p>
               </div>
             </div>
           </section>

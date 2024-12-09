@@ -124,7 +124,7 @@ form {
 
 .accordion-form {
   display: grid;
-  align-items: center;
+  align-items: end;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   grid-template-rows: 80px;
@@ -139,4 +139,12 @@ form {
 
 .required {
   color: red;
+}
+
+.textExplication{
+  grid-column: 1/-1;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #555555;
 }
