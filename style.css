@@ -148,3 +148,10 @@ form {
   font-size: 14px;
   color: #555555;
 }
+
+.subTitle{
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+
