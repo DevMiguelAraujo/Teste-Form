@@ -1,91 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-dark%402x.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>
+      Apoio Financeiro 2024 - Ensino Médio Integrado ao Técnico - Escola Técnica
+      do IIEP
+    </title>
   </head>
   <body>
-    <section id="container">
-      <div>
-        <img
-          src="https://www.jotform.com/uploads/ensinoeinstein/form_files/N10509_KV-Awareness%20(1).66aa4a1559b6c2.04150169.png"
-          alt=""
-        />
-      </div>
+    <section class="content-page">
+      <img
+        src="https://www.jotform.com/uploads/ensinoeinstein/form_files/N10509_KV-Awareness%20(1).66aa4a1559b6c2.04150169.png"
+        alt="Ensino Médio Integrado ao Técnico"
+      />
       <main>
-        <form>
-          <section class="content-form">
-            <div class="titulo">
-              <img
-                src="https://www.jotform.com/uploads/ensinoeinstein/form_files/Logo-IIEP-.5b844a56846d47.21530906.jpg"
-                alt=""
-                class="logo"
-              />
-              <div>
-                <h1>Formulário para Requisição de Apoio Financeiro</h1>
-                <p>
-                  O preenchimento deste formulário é obrigatório. Leia
-                  atentamente a politica de concessão de bolsas. O envio deste
-                  formulário implica na concordância do candidato com a mesma.
-                </p>
-              </div>
-            </div>
-            <div class="importante">
-              <span>
-                <h2>IMPORTANTE</h2>
-              </span>
+        <form action="#">
+          <div class="title-form">
+            <img
+              src="https://www.jotform.com/uploads/ensinoeinstein/form_files/Logo-IIEP-.5b844a56846d47.21530906.jpg"
+              alt="Logo Albert Einstein"
+              class="logo"
+            />
+            <div>
+              <h1>Formulário para Requisição de Apoio Financeiro</h1>
               <p>
-                É fundamental que você formalize sua solicitação dentro do prazo
-                estipulado, utilizando o formulário oficial e seguindo as
-                orientações disponíveis no menu correspondente ao benefício em
-                nosso site. Em caso de dúvidas, entre em contato através do
-                e-mail: apoiofinanceiroetim@einstein.br. Este e-mail deve ser
-                usado exclusivamente para esclarecer dúvidas e não é válido para
-                o envio da solicitação de análise de apoio financeiro,
-                documentos ou qualquer informação que deva ser incluída no
-                formulário.
-              </p>
-              <p>
-                <span>Fique atento:</span> Após preencher o formulário, a
-                documentação deve ser enviada exclusivamente através do botão
-                "Anexar Documentos" localizado ao final deste formulário.
+                O preenchimento deste formulário é obrigatório. Leia atentamente
+                a politica de concessão de bolsas. O envio deste formulário
+                implica na concordância do candidato com a mesma.
               </p>
             </div>
-            <section class="dados">
-              <button>Dados Cadastrais</button>
-              <div class="container-inputs">
-                <div class="input-form">
-                  <label for="">
-                    Nome do aluno <span>*</span>
-                  </label>
-                  <input type="text" placeholder="Marcos Antônio">
-                </div>
-                <div class="input-form">
-                  <label for="">
-                    Número de Inscrição <span>*</span>
-                  </label>
-                  <input type="number" placeholder="2507000321">
-                </div>
-                <div class="input-form">
-                  <label for="">
-                    CEP <span>*</span>
-                  </label>
-                  <div class="cep">
-                    <input type="number" placeholder="04406070" id="cepNumber">
-                    <p id="search">buscar</p>
-                  </div>
-                </div>
-                <div class="input-form">
-                  <label for="">
-                    Data de Nascimento <span>*</span>
-                  </label>
-                  <input type="date">
-                </div>
+          </div>
+          <span class="line"></span>
+          <div class="description">
+            <h2>IMPORTANTE</h2>
+            <p>
+              É fundamental que você formalize sua solicitação dentro do prazo
+              estipulado, utilizando o formulário oficial e seguindo as
+              orientações disponíveis no menu correspondente ao benefício em
+              nosso site. Em caso de dúvidas, entre em contato através do
+              e-mail:
+              <span class="email">apoiofinanceiroetim@einstein.br</span>. Este
+              e-mail deve ser usado exclusivamente para esclarecer dúvidas e não
+              é válido para o envio da solicitação de análise de apoio
+              financeiro, documentos ou qualquer informação que deva ser
+              incluída no formulário.
+            </p>
+            <p>
+              <span class="warning">Fique atento:</span> Após preencher o
+              formulário, a documentação deve ser enviada exclusivamente através
+              do botão "Anexar Documentos" localizado ao final deste formulário.
+            </p>
+          </div>
+          <section>
+            <div class="accordion-button">
+              <h3>Dados Cadastrais do Aluno</h3>
+              <span class="arrow"></span>
+            </div>
+            <div class="accordion-form">
+              <div class="input-form">
+                <label for="name">
+                  Nome do Aluno
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Marcos da Costa"
+                />
               </div>
-            </section>
+              <div class="input-form">
+                <label for="registration">
+                  Número da Inscrição
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="registration"
+                  id="registration"
+                  placeholder="250700240"
+                />
+              </div>
+              <div class="input-form">
+                <label for="birthday">
+                  Data de Nascimento
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="date"
+                  name="birthday"
+                  id="birthday"
+                  placeholder="dd/mm/aaaa"
+                />
+              </div>
+            </div>
           </section>
         </form>
       </main>
