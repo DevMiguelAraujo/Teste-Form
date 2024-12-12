@@ -61,7 +61,7 @@
           </div>
           <section>
             <div class="accordion-button">
-              <h3>Dados Cadastrais do Aluno</h3>
+              <h2>Dados Cadastrais do Aluno</h2>
               <span class="arrow"></span>
             </div>
             <div class="accordion-form">
@@ -75,6 +75,7 @@
                   name="name"
                   id="name"
                   placeholder="Marcos da Costa"
+                  autocomplete="name"
                   required
                 />
               </div>
@@ -130,7 +131,7 @@
                   required
                 />
               </div>
-            
+
               <div class="input-form">
                 <label for="country">
                   País
@@ -141,6 +142,7 @@
                   name="country"
                   id="country"
                   placeholder="Brasil"
+                  autocomplete="country"
                   required
                 />
               </div>
@@ -180,6 +182,7 @@
                   name="email"
                   id="email"
                   placeholder="alunoeinstein@email.com.br"
+                  autocomplete="email"
                   required
                 />
               </div>
@@ -221,16 +224,18 @@
                   placeholder="dd/mm/aaaa"
                   required
                 />
-              </div>  
-              <div>
+              </div>
+              <div class="input-form">
                 <label for="teaching">
                   Cursou Ensino Fundamental em:
                   <span class="required">*</span>
                 </label>
-                <select name="teaching" id="teaching required">
-                  <option value="public">Público</option>
-                  <option value="private">Particular</option>
-                  <option value="privateWDiscount">Particular com Bolsa</option>
+                <select name="teaching" id="teaching" required>
+                  <option value="public">Ensino Público</option>
+                  <option value="private">Ensino Particular</option>
+                  <option value="privateWDiscount">
+                    Ensino Particular com Bolsa
+                  </option>
                 </select>
               </div>
               <div class="input-form">
@@ -250,10 +255,19 @@
           </section>
           <section>
             <div class="accordion-button">
-              <h3>Grupo Familiar</h3>
+              <h2>Grupo Familiar</h2>
               <span class="arrow"></span>
             </div>
             <div class="accordion-form">
+              <div>
+                <p>
+                  Insira as informações abaixo de todas as pessoas do seu grupo
+                  familiar, incluindo você e menores de idade:
+                </p>
+              </div>
+              <div>
+                <h3>Demonstrativo de Receitas e Patrimônio</h3>
+              </div>
               <div class="input-form">
                 <label for="valueFamily">
                   Valor do Patrimônio Familiar
@@ -308,27 +322,376 @@
               </div>
               <div class="textExplication">
                 <p>
-                  *A renda per capita é calculada somando-se à renda bruta dos componentes 
-                  do grupo familiar e dividindo-se pelo número de pessoas que formem este grupo familiar.
-                  Entende-se por renda  familiar mensal bruta o somatório do valor bruto dos salários, 
-                  proventos, pensões, pensões alimentícias, aposentadorias, outros rendimentos do trabalho 
-                  não assalariado, rendimentos do mercado informal ou autônomo e rendimentos auferidos do 
-                  patrimônio, de todos os membros do grupo familiar, incluindo o candidato.
-                  Entende-se pelo grupo familiar, além do próprio candidato, o conjunto de pessoas, 
-                  que usufruam da renda bruta mensal familiar e que sejam relacionados ao candidato 
-                  pelos seguintes graus de parentesco: pai, padrasto, mãe, madrasta, cônjuge, 
-                  companheiro, filho, enteado, avós, etc.
+                  *A renda per capita é calculada somando-se à renda bruta dos
+                  componentes do grupo familiar e dividindo-se pelo número de
+                  pessoas que formem este grupo familiar. Entende-se por renda
+                  familiar mensal bruta o somatório do valor bruto dos salários,
+                  proventos, pensões, pensões alimentícias, aposentadorias,
+                  outros rendimentos do trabalho não assalariado, rendimentos do
+                  mercado informal ou autônomo e rendimentos auferidos do
+                  patrimônio, de todos os membros do grupo familiar, incluindo o
+                  candidato. Entende-se pelo grupo familiar, além do próprio
+                  candidato, o conjunto de pessoas, que usufruam da renda bruta
+                  mensal familiar e que sejam relacionados ao candidato pelos
+                  seguintes graus de parentesco: pai, padrasto, mãe, madrasta,
+                  cônjuge, companheiro, filho, enteado, avós, etc.
                 </p>
               </div>
-              <h3 class="subTitle">
-                Demonstrativo de Despesas Mensais
-              </h3>
-              
+              <h3 class="subTitle">Demonstrativo de Despesas Mensais</h3>
+              <div class="input-form">
+                <label for="rent">
+                  Moradia (condominio, aluguel, IPTU, prestações etc)
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="rent"
+                  id="rent"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="food">
+                  Alimentação
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="food"
+                  id="food"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="routinePayments">
+                  Contas Fixas (Água, Luz, Telefone Fixo, Telefone Celular,
+                  Internet)
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="routinePayments"
+                  id="routinePayments"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="maidPayment">
+                  Salário Empregada/Diarista
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="maidPayment"
+                  id="maidPayment"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="health">
+                  Saúde: (Plano de Saúde, Medicamentos e Farmácia)
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="health"
+                  id="health"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="education">
+                  Educação:
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="education"
+                  id="education"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="security">
+                  Seguro
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="security"
+                  id="security"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="transport">
+                  Transporte: (Combustível, Transporte Coletivo)
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="transport"
+                  id="transport"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="leisure">
+                  Lazer: (Mensalidade de Clube, Livros, Revistas, Periódicos)
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="leisure"
+                  id="leisure"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form">
+                <label for="othersPayments">
+                  Outras Despesas:
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  name="othersPayments"
+                  id="othersPayments"
+                  placeholder="R$5.000"
+                  required
+                />
+              </div>
+              <div class="input-form-radio">
+                <span>
+                  Reside em Casa Própria?
+                  <span class="required">*</span>
+                </span>
+                <div>
+                  <label for="yes">sim</label>
+                  <input type="radio" id="yes" name="yn" value="sim" />
+                </div>
+                <div>
+                  <label for="no">não</label>
+                  <input type="radio" id="no" name="yn" value="não" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="accordion-button">
+              <h2>Questionário</h2>
+              <span class="arrow"></span>
+            </div>
+            <div class="accordion-form">
+              <div class="textarea-form">
+                <label for="discountOption">
+                  1- Por que você merece receber uma bolsa de estudos para o
+                  Ensino Médio Integrado ao Técnico? Pode nos contar suas
+                  experiências pessoais, trabalhos voluntários, obstáculos que
+                  teve de superar, hobbies, prática esportiva, atividades de
+                  representação, prêmios recebidos etc. (use no máximo 20
+                  linhas)
+                </label>
+                <textarea name="discountOption" id="discountOption"> </textarea>
+                <span id="counterLine">Linhas restantes: 20</span>
+              </div>
+              <div class="textarea-form">
+                <label for="schoolOption">
+                  2- Se o custo não fosse um obstáculo, você optaria pelo Ensino
+                  Einstein em relação a outras escolas? Por quê? (use no máximo
+                  600 caracteres)
+                </label>
+                <textarea name="schoolOption" id="schoolOption" maxlength="600">
+                </textarea>
+                <span id="counterCharacter">Caracteres restantes: 600</span>
+              </div>
+              <div class="textExplication">
+                <h3>3 - Em uma escala de 1 a 3, sendo:</h3>
+                <span
+                  >1 = Indiferente; 2 = Pouco importante e 3 = Muito
+                  Importante</span
+                >
+                <p>
+                  Opine abaixo como estes fatores o influenciaram a prestar
+                  vestibular para o Ensino Médio Técnico Integrado ao Técnico
+                  Einstein
+                </p>
+              </div>
+              <div class="input-form">
+                <label for="institution">
+                  3.1 - Credibilidade da instituição:
+                  <span class="required">*</span>
+                </label>
+                <select name="institution" id="institution" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="input-form">
+                <label for="family">
+                  3.2 - Influência da família:
+                  <span class="required">*</span>
+                </label>
+                <select name="family" id="family" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="input-form">
+                <label for="influenceSchool">
+                  3.3 - Influência da escola/cursinho:
+                  <span class="required">*</span>
+                </label>
+                <select name="influenceSchool" id="influenceSchool" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="input-form">
+                <label for="metodologic">
+                  3.4 - Metodologia que será empregada:
+                  <span class="required">*</span>
+                </label>
+                <select name="metodologic" id="metodologic" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="accordion-button">
+              <h2>Anexar Arquivos</h2>
+              <span class="arrow"></span>
+            </div>
+            <div class="accordion-form">
+              <div class="textExplication">
+                <h3>
+                  <a
+                    href="https://conteudo-ensino.s3.sa-east-1.amazonaws.com/documentos/escola-tecnica/2023/etim-documentacao.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    CLIQUE AQUI
+                  </a>
+                  E VEJA A RELAÇÃO DE DOCUMENTOS OBRIGATÓRIOS PARA SOLICITAÇÃO
+                  DE ANÁLISE PARA APOIO FINANCEIRO
+                </h3>
+              </div>
+              <div class="instructionList">
+                <h4>Orientações para anexar os documentos:</h4>
+                <ul>
+                  <li>
+                    <p>
+                      Tamanho máximo dos arquivos somados é de 30MB e é
+                      obrigatório que estejam no formato zip. Caso o seu arquivo
+                      exceda o limite de 30MB, reduza a qualidade da imagem dos
+                      documentos que serão enviados.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Anexar a pasta zipada com os documentos digitalizados no
+                      formato JPEG.(Em caso de dúvidas clique aqui).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      O candidato poderá anexar e enviar os documentos uma única
+                      vez.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      É responsabilidade do candidato garantir o envio dos
+                      documentos solicitados de forma legível.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Os documentos deverão ser nomeados conforme seu conteúdo e
+                      indicando o nome da pessoa do grupo familiar que se refere
+                      (Ex. Imposto de Renda Simone)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      A ausência de documentos que comprovem as informações
+                      fornecidas no formulário excluirá automaticamente o
+                      candidato do processo de avaliação.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      A FICSAE poderá a qualquer momento solicitar documentos
+                      adicionais comprobatórios para a análise.
+                    </p>
+                  </li>
+                  <li>
+                    <a
+                      href="https://apps.einstein.br/ensino/manual_digitalizacao.pdf"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Manual de Boas Práticas na Digitalização de Documentos.
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="textExplication">
+                <h4>Atenção!</h4>
+                <p class="alert">
+                  Caso o seu arquivo exceda o limite de 30MB, reduza a qualidade
+                  da imagem dos documentos que serão enviados.
+                </p>
+              </div>
+              <div class="inputsFile">
+                <div>
+                  <label for="fileID">
+                    Documentos de identificação e comprovantes
+                    <span class="required">*</span>
+                  </label>
+                  <input type="file" id="fileID" accept=".zip, .rar, .7zip"/>
+                </div>
+                <div>
+                  <label for="fileDeclarations">
+                    Documentos de despesas e declarações
+                    <span class="required">*</span>
+                  </label>
+                  <input type="file" id="fileDeclarations" accept=".zip, .rar, .7zip"/>
+                </div>
+                <div>
+                  <label for="fileRent">
+                    Documentos de renda e declarações
+                    <span class="required">*</span>
+                  </label>
+                  <input type="file" id="fileRent" accept=".zip, .rar, .7zip"/>
+                </div>
+                <h4>Zip seus arquivos aqui:</h4>
+                <div>
+                  <input type="file" id="fileInput" multiple/>
+                  <button onclick="zipFiles()">Baixar Pasta Zip</button>
+                </div>
+              </div>
             </div>
           </section>
         </form>
       </main>
     </section>
-    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <script defer src="./script.js"></script>
   </body>
 </html>

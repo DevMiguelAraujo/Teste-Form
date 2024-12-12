@@ -2,6 +2,7 @@ body {
   font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   justify-content: center;
   background-color: #f5f5f5;
+  padding: 88px 0;
 }
 
 img {
@@ -62,7 +63,7 @@ form {
   height: 1px;
   width: 100%;
   margin: 10px 0;
-  background-color: #ebebeb;
+  background-color: #9bd5f0;
 }
 
 .description {
@@ -126,8 +127,7 @@ form {
   display: grid;
   align-items: end;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  grid-template-rows: 80px;
+  gap: 40px;
   padding: 24px 0;
 }
 
@@ -135,6 +135,13 @@ form {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  border-bottom: 1px rgb(152, 210, 243) solid;
+}
+
+.input-form-radio{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .required {
@@ -149,9 +156,83 @@ form {
   color: #555555;
 }
 
+.textExplication h4{
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.alert{
+  font-size: 1.1rem;
+}
+
 .subTitle{
   text-align: center;
   grid-column: 1/-1;
 }
 
+.textarea-form{
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 
+.textarea-form textarea{
+  max-width: 100%;
+  min-width: 150px;
+  width: 100%;
+  max-height: 500px;
+  min-height: 150px;
+}
+
+#discountOption{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 20;
+  line-clamp: 20;
+}
+
+#counterLine{
+  margin-top: -24px;
+  text-align: start;
+  display: flex;
+  justify-content: start;
+  width: fit-content;
+}
+
+#counterCharacter{
+  margin-top: -24px;
+  text-align: start;
+  display: flex;
+  justify-content: start;
+  width: fit-content;
+}
+
+.instructionList{
+  text-align: left;
+  grid-column: 1/-1;
+}
+
+.instructionList ul{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style-type: disc;
+}
+
+.instructionList ul li{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.inputsFile{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputsFile div{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
