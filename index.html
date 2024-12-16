@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Apoio Financeiro ETIM" />
     <link
       rel="shortcut icon"
       href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-dark%402x.png"
@@ -17,18 +18,11 @@
   </head>
   <body>
     <section class="content-page">
-      <img
-        src="https://www.jotform.com/uploads/ensinoeinstein/form_files/N10509_KV-Awareness%20(1).66aa4a1559b6c2.04150169.png"
-        alt="Ensino Médio Integrado ao Técnico"
-      />
+      <img src="./img/ETIM.png" alt="Ensino Médio Integrado ao Técnico" />
       <main>
         <form action="#">
           <div class="title-form">
-            <img
-              src="https://www.jotform.com/uploads/ensinoeinstein/form_files/Logo-IIEP-.5b844a56846d47.21530906.jpg"
-              alt="Logo Albert Einstein"
-              class="logo"
-            />
+            <img src="./img/Logo.jpg" alt="Logo Albert Einstein" class="logo" />
             <div>
               <h1>Formulário para Requisição de Apoio Financeiro</h1>
               <p>
@@ -254,11 +248,11 @@
             </div>
           </section>
           <section>
-            <div class="accordion-button">
+            <div class="accordion-button ativo">
               <h2>Grupo Familiar</h2>
               <span class="arrow"></span>
             </div>
-            <div class="accordion-form">
+            <div class="accordion-form close">
               <div>
                 <p>
                   Insira as informações abaixo de todas as pessoas do seu grupo
@@ -476,21 +470,21 @@
                 </span>
                 <div>
                   <label for="yes">sim</label>
-                  <input type="radio" id="yes" name="yn" value="sim" />
+                  <input type="radio" id="yes" name="yn" value="yes" />
                 </div>
                 <div>
                   <label for="no">não</label>
-                  <input type="radio" id="no" name="yn" value="não" />
+                  <input type="radio" id="no" name="yn" value="no" />
                 </div>
               </div>
             </div>
           </section>
           <section>
-            <div class="accordion-button">
+            <div class="accordion-button ativo">
               <h2>Questionário</h2>
               <span class="arrow"></span>
             </div>
-            <div class="accordion-form">
+            <div class="accordion-form close">
               <div class="textarea-form">
                 <label for="discountOption">
                   1- Por que você merece receber uma bolsa de estudos para o
@@ -572,22 +566,22 @@
             </div>
           </section>
           <section>
-            <div class="accordion-button">
+            <div class="accordion-button ativo">
               <h2>Anexar Arquivos</h2>
               <span class="arrow"></span>
             </div>
-            <div class="accordion-form">
+            <div class="accordion-form close">
               <div class="textExplication">
                 <h3>
                   <a
                     href="https://conteudo-ensino.s3.sa-east-1.amazonaws.com/documentos/escola-tecnica/2023/etim-documentacao.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-describedby="documentos exigidor"
                   >
-                    CLIQUE AQUI
+                    Relação de Documentos
                   </a>
-                  E VEJA A RELAÇÃO DE DOCUMENTOS OBRIGATÓRIOS PARA SOLICITAÇÃO
-                  DE ANÁLISE PARA APOIO FINANCEIRO
+                  OBRIGATÓRIOS PARA SOLICITAÇÃO DE ANÁLISE PARA APOIO FINANCEIRO
                 </h3>
               </div>
               <div class="instructionList">
@@ -657,41 +651,69 @@
                   da imagem dos documentos que serão enviados.
                 </p>
               </div>
+              <div class="zip">
+                <h4>Zip seus arquivos aqui:</h4>
+                <div>
+                  <label for="fileInput">Escolher pasta para zipar</label>
+                  <input type="file" id="fileInput" multiple />
+                  <button onclick="zipFiles()" type="button">
+                    Baixar Pasta Zip
+                  </button>
+                </div>
+              </div>
               <div class="inputsFile">
                 <div>
                   <label for="fileID">
                     Documentos de identificação e comprovantes
                     <span class="required">*</span>
                   </label>
-                  <input type="file" id="fileID" accept=".zip, .rar, .7zip"/>
+                  <div class="area-button">
+                    <p>
+                      <label for="fileID">Carregar Arquivo</label>
+                    </p>
+                  </div>
+                  <input type="file" id="fileID" accept=".zip, .rar, .7zip" />
                 </div>
                 <div>
                   <label for="fileDeclarations">
                     Documentos de despesas e declarações
                     <span class="required">*</span>
                   </label>
-                  <input type="file" id="fileDeclarations" accept=".zip, .rar, .7zip"/>
+                  <div class="area-button">
+                    <p>
+                      <label for="fileDeclarations">Carregar Arquivo</label>
+                    </p>
+                  </div>
+                  <input
+                    type="file"
+                    id="fileDeclarations"
+                    accept=".zip, .rar, .7zip"
+                  />
                 </div>
                 <div>
                   <label for="fileRent">
                     Documentos de renda e declarações
                     <span class="required">*</span>
                   </label>
-                  <input type="file" id="fileRent" accept=".zip, .rar, .7zip"/>
-                </div>
-                <h4>Zip seus arquivos aqui:</h4>
-                <div>
-                  <input type="file" id="fileInput" multiple/>
-                  <button onclick="zipFiles()">Baixar Pasta Zip</button>
+                  <div class="area-button">
+                    <p>
+                      <label for="fileRent">Carregar Arquivo</label>
+                    </p>
+                  </div>
+                  <input type="file" id="fileRent" accept=".zip, .rar, .7zip" />
                 </div>
               </div>
+            </div>
+            <div class="final-buttons">
+              <button class="save" type="button">Salvar Respostas</button>
+              <button class="submit" type="submit">Enviar Formulário</button>
             </div>
           </section>
         </form>
       </main>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <script defer src="./plugins/jszip.min.js"></script>
+    <script defer src="./plugins/filesaver.js"></script>
     <script defer src="./script.js"></script>
   </body>
 </html>

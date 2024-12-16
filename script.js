@@ -2,12 +2,48 @@ const textAreaSchoolOption = document.getElementById("schoolOption");
 const textAreaDiscountOption = document.getElementById("discountOption");
 const textAreaCounterCharacter = document.getElementById("counterCharacter");
 const textAreaCounterLine = document.getElementById("counterLine");
+const accordionButtons = Array.from(
+  document.querySelectorAll(".accordion-button")
+);
+const selectButtons = Array.from(document.querySelectorAll("select"));
+const textAreas = Array.from(document.querySelectorAll("textarea"));
+const inputs = Array.from(document.querySelectorAll("input"));
+const saveButton = document.querySelector(".save");
 
-textAreaSchoolOption.innerHTML = "";
-textAreaDiscountOption.innerHTML = "";
+function getLocalStorage(localStorage) {
+  for (const property in localStorage) {
+    if(property === 'yn') {
+      document.getElementById(localStorage[property]).click()
+      return
+    }
+    console.log(property)
+    document.getElementById(property).value = localStorage[property];
+  }
+}
 
-textAreaSchoolOption.addEventListener("keyup", counterRemainingCharacter);
-textAreaDiscountOption.addEventListener("keyup", counterRemainingLine);
+function saveAnswer() {
+  inputs.map((item) => {
+    if (item.value !== "" && item.id !== "yes" && item.id !== "no" && item.id !== "fileRent" && item.id !== "fileDeclarations" && item.id !== "fileID" ) {
+      localStorage.setItem(item.id, item.value);
+    }
+  });
+  selectButtons.map((item) => {
+    localStorage.setItem(item.id, item.value)
+  })
+  const radioButtons = document.querySelector('input[name="yn"]:checked')
+  if(radioButtons.value){
+    localStorage.setItem('yn', radioButtons.value)
+  }
+  textAreas.forEach(text => {
+    localStorage.setItem(text.id, text.value)
+  })
+}
+
+function toggleAccordion(button) {
+  button.target.nextElementSibling.classList.toggle("close");
+  button.target.classList.toggle("ativo");
+  saveAnswer()
+}
 
 function counterRemainingCharacter() {
   const limit = 600;
@@ -44,3 +80,16 @@ function zipFiles() {
     saveAs(content, "files.zip");
   });
 }
+
+textAreaSchoolOption.innerHTML = "";
+textAreaDiscountOption.innerHTML = "";
+
+textAreaSchoolOption.addEventListener("keyup", counterRemainingCharacter);
+textAreaDiscountOption.addEventListener("keyup", counterRemainingLine);
+saveButton.addEventListener("click", saveAnswer);
+
+accordionButtons.forEach((button) => {
+  button.addEventListener("click", toggleAccordion);
+});
+
+getLocalStorage({ ...localStorage });
