@@ -9,40 +9,53 @@ const selectButtons = Array.from(document.querySelectorAll("select"));
 const textAreas = Array.from(document.querySelectorAll("textarea"));
 const inputs = Array.from(document.querySelectorAll("input"));
 const saveButton = document.querySelector(".save");
+const inputsfile = Array.from(document.querySelectorAll(".inputsFile input"));
+const nameInputsfile = Array.from(document.querySelectorAll(".fileUpdated"));
+
+inputsfile.forEach((i) => i.addEventListener("change", saveAnswer));
 
 function getLocalStorage(localStorage) {
   for (const property in localStorage) {
-    if(property === 'yn') {
-      document.getElementById(localStorage[property]).click()
-      return
+    if (property === "yn") {
+      document.getElementById(localStorage[property]).click();
+      return;
     }
-    console.log(property)
     document.getElementById(property).value = localStorage[property];
   }
 }
 
 function saveAnswer() {
   inputs.map((item) => {
-    if (item.value !== "" && item.id !== "yes" && item.id !== "no" && item.id !== "fileRent" && item.id !== "fileDeclarations" && item.id !== "fileID" ) {
+    if (
+      item.value !== "" &&
+      item.id !== "yes" &&
+      item.id !== "no" &&
+      item.id !== "fileRent" &&
+      item.id !== "fileDeclarations" &&
+      item.id !== "fileID"
+    ) {
       localStorage.setItem(item.id, item.value);
     }
   });
   selectButtons.map((item) => {
-    localStorage.setItem(item.id, item.value)
-  })
-  const radioButtons = document.querySelector('input[name="yn"]:checked')
-  if(radioButtons.value){
-    localStorage.setItem('yn', radioButtons.value)
+    localStorage.setItem(item.id, item.value);
+  });
+  const radioButtons = document.querySelector('input[name="yn"]:checked');
+  if (radioButtons.value !== "null") {
+    localStorage.setItem("yn", radioButtons.value);
   }
-  textAreas.forEach(text => {
-    localStorage.setItem(text.id, text.value)
-  })
+  textAreas.forEach((text) => {
+    localStorage.setItem(text.id, text.value);
+  });
+  nameInputsfile.forEach(
+    (element) => (element.innerHTML = element.previousElementSibling.value)
+  );
 }
 
 function toggleAccordion(button) {
   button.target.nextElementSibling.classList.toggle("close");
   button.target.classList.toggle("ativo");
-  saveAnswer()
+  saveAnswer();
 }
 
 function counterRemainingCharacter() {
